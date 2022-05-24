@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "Thendo@teamleader",
     "database": "loginregister",
     "host": "127.0.0.1",
     "dialect": "mysql",
