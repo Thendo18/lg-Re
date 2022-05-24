@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "sequelize": "node_modules\\.bin\\sequelize.cmd"
+    
   },
   "private": true,
   "dependencies": {
