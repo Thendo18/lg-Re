@@ -13,8 +13,7 @@ router.post("/register", (req, res) => {
 
     if (username == undefined || username == ""
         || email == undefined || email == ""
-        || password == undefined || password == "")
-         {
+        || password == undefined || password == "") {
 
 
         res.status(401).json({
@@ -35,7 +34,6 @@ router.post("/register", (req, res) => {
 
 
         })
-  
             .then((value) => {
 
                 //if no data create a record in db with hashed password
@@ -59,8 +57,7 @@ router.post("/register", (req, res) => {
                             
                             .catch((err) => 
                                 res.status(400).json({
-                                    message: "error occured"
-                                 
+                                    message: "error occured"  
                                 }))
 
                             })
@@ -80,8 +77,4 @@ router.post("/register", (req, res) => {
                 }
 
                 })
-          
-       
-
-
 module.exports = router

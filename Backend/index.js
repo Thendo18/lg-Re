@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bodyParse = require("body-parser");
+// const bodyParse = require("body-parser");
 const dbConnection = require("./Connection/db");
 
 const path = require("path");
