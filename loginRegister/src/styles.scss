@@ -1,9 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css');
-// tailwind css 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-
-@import '~mdb-ui-kit/css/mdb.min.css';
