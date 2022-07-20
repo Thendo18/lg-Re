@@ -100,10 +100,10 @@ module.exports.signup = (req, res) => {
         password: req.body.password
     };
     
-    // check :userType paramater. only accept /Learner or /Teacher
-    if (!(userType == 'teacher' || userType == 'learner' || userType == 'admin')) {
+    // check :userType paramater. only accept /clients or /moderator
+    if (!(userType == 'moderator' || userType == 'clients' || userType == 'admin')) {
         res.status(400).send('invalid userType parameter in url.')
-        throw Error ('Invalid value in request parameter. /:userType parameter must be equal to "teacher","Admin" or "learner"');
+        throw Error ('Invalid value in request parameter. /:userType parameter must be equal to "moderator","Admin" or "clients"');
     }
 
     //validate user credentials
@@ -262,8 +262,8 @@ module.exports.myDocs = (req, res) => {
 
     //Save upload response to the db
     query = {
-        text: 'INSERT INTO qualification (name, description, qualification, teacher_id) VALUES ($1,$2,$3,$4)',
-        value: [req.body.name, req.body.description, req.body.upload_res, req.body.teacher_id]
+        text: 'INSERT INTO qualification (name, description, qualification, moderator_id) VALUES ($1,$2,$3,$4)',
+        value: [req.body.name, req.body.description, req.body.upload_res, req.body.moderator_id]
     }
  
     // DB query
@@ -397,8 +397,8 @@ module.exports.updatePassword = (req, res) => {
 
 module.exports.userDocs = (req, res) => {
     let query = {
-        text: 'SELECT * FROM qualification WHERE teacher_id = $1',
-        value: [req.body.teacher_id]
+        text: 'SELECT * FROM qualification WHERE moderator_id = $1',
+        value: [req.body.moderator_id]
     }
 
     pool.query(query.text, query.value).then(data => {

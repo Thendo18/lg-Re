@@ -1,8 +1,8 @@
 // Constants
 const express = require('express');
 const cors = require('cors');
-const userRoute = require('./Routes/user');
-const authRoute = require('./Routes/auth');
+const userRoute = require('./routes/user.routes');
+const authRoute = require('./routes/auth.routes');
 const auth = require('./Authentication/authentication');
 
 
@@ -37,3 +37,5 @@ app.listen(PORT, HOST, ()=>{
     console.log('server is listening to port ', PORT);
 })
 //
+
+

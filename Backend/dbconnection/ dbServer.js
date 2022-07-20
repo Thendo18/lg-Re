@@ -5,7 +5,7 @@ const mysql = require("mysql2")
 
 const db = mysql.createPool({
    connectionLimit: 100,
-   host: "127.0.0.1",       //This is your localhost IP
+   host: "0.0.0.0",       //This is your localhost IP
    user: "newuser",         // "newuser" created in Step 1(e)
    password: "Thendo@123",  // password for the new user
    database: "LoginRegister",      // Database name
