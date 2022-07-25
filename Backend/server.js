@@ -1,41 +1,44 @@
-// Constants
-const express = require('express');
-const cors = require('cors');
-const userRoute = require('./routes/user.routes');
-const authRoute = require('./routes/auth.routes');
-const auth = require('./Authentication/authentication');
-
-
-
+require('dotenv').config()
+const dbConfig = require("./config/db.config.js");
+const express = require("express");
+const sequelizec = require("sequelize");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 const app = express();
-const HOST = "0.0.0.0"
-const PORT = process.env.PORT || 4310; 
+const router = express.Router();
+const employees = require("./app/routes/employees.js");
 
-const corsOptions = {origin: '*'}
-
-
-
-app.use(cors(corsOptions))
-app.use(express.json());   // to support JSON-encoded 
-app.use(express.urlencoded());   // to support JSON-encoded 
-app.use( cors({origin: true, credentials: true}) )
+var corsOptions = {
+  origin: "http://localhost:4200"
+};
 
 
-app.get('/', (req,res)=>{
-    res.send("App backend running");
+
+app.use(cors(corsOptions));
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+ 
+
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to thendo's application." });
 });
 
-app.use('/user', userRoute);
-app.use('/auth', authRoute);
+
+app.use('/api', employees);
 
 
 app.use((err,req,res)=>{
-    console.log(err);
+  console.log(err);
 })
 
-app.listen(PORT, HOST, ()=>{
-    console.log('server is listening to port ', PORT);
-})
-//
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
 
 
+
+
+module.exports = app;
