@@ -1,12 +1,12 @@
 require('dotenv').config()
-const dbConfig = require("./config/db.config.js");
+const dbConfig = require("./config/db.config");
 const express = require("express");
 const sequelizec = require("sequelize");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const router = express.Router();
-const employees = require("./app/routes/employees.js");
+const users = require("");
 
 var corsOptions = {
   origin: "http://localhost:4200"
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.use('/api', employees);
+app.use('/api', clients);
 
 
 app.use((err,req,res)=>{
