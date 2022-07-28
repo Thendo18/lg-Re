@@ -42,4 +42,4 @@ app.listen(PORT, () => {
 
 
 
-module.exports = api;
+module.exports = app;
