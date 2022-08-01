@@ -1,180 +1,59 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-}
+body{
 
-section .imgBx {
-    position: relative;
-    width: 50%;
-    height: 100%;
+    background-color: rgb(207, 190, 64);
+height: 100%;
+}
+.wrapper {
+   
+    width: 60%;
+    height: 60%;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    border-radius: 15px;
 }
 
 
-section .imgBx  img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-section .contentBx {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-li i{
-  color:white;
-}
-section .contentBx .formBx {
-    width: 50%;
-}
-
-section .contentBx .formBx h2 {
-    color: #140a08;
+.wrapper .name {
     font-weight: 600;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border-bottom: 4px solid #ff4584;
-    display: inline-block;
-    letter-spacing: 1px;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555
 }
 
-section .contentBx .formBx .inputBx {
-    margin-bottom: 20px;
-}
-
-section .contentBx .formBx .inputBx span{
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: inline-block;
-    color: #140a08;
-    font-weight: 300;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
-
-section .contentBx .formBx .inputBx input {
+.wrapper .form-field input {
     width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    font-weight: 400;
-    border: 1px solid #607d8b;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #607d8b;
-    background: transparent;
-    border-radius: 30px;
-}
-
-section .contentBx .formBx .inputBx input[type="submit"] {
-    background: #140a08;
-    color: #fff;
-    outline: none;
+    display: block;
     border: none;
-    font-weight: 500;
-    cursor: pointer;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px
 }
 
-section .contentBx .formBx .inputBx input[type="submit"]:hover {
-    background: #f53677;
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
 }
 
-section .contentBx .formBx .remember {
-    margin-bottom: 10px;
-    color: #607d8b;
-    font-weight: 400;
-    font-size: 14px;
+.wrapper .form-field .fas {
+    color: #555
 }
 
-section .contentBx .formBx .inputBx p {
-    color: #607d8b;
-}
-
-section .contentBx .formBx .inputBx p a {
-    color: #ff4584;
-}
-
-section .contentBx .formBx h3 {
-    color: #607d8b;
-    text-align: center;
-    margin: 80px 0 10px;
-    font-weight: 500;
-}
-
-section .contentBx .formBx .sci {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section .contentBx .formBx .sci li {
-    list-style: none;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #607d8b;
-    border-radius: 50%;
-    margin: 0 7px;
-    cursor: pointer;
-}
-
-section .contentBx .formBx .sci li:hover {
-    background: #ff4584;
-}
-
-section .contentBx .formBx .sci li img {
-    transform: scale(0.5);
-    filter: invert(1);
-}
-
-@media (max-width: 768px) {
-    section .imgBx {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    section .contentBx {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    
-    section .contentBx .formBx {
-        width: 100%;
-        padding: 40px;
-        background: rgb(255 255 255 / 0.9);
-        margin: 50px;
-    }
-
-    section .contentBx .formBx h3 {
-        color: #607d8b;
-        text-align: center;
-        margin: 30px 0 10px;
-        font-weight: 500;
-    }
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px
 }
 
 
