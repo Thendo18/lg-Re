@@ -29,6 +29,7 @@
     "jsonwebtoken": "8.5.1",
     "mdb-ui-kit": "^3.11.0",
     "mysql2": "*",
+    "ngx-abstract-control-as": "^1.1.0",
     "rxjs": "~7.5.0",
     "sequelize": "*",
     "sequelize-cli": "^6.4.1",

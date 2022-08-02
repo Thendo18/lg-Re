@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 
-const pool = require("../../config/database");
+const pool = require("../../config/db.config");
 
 const jwt = require("jsonwebtoken");
 //Register Function
@@ -49,13 +49,6 @@ exports.register = async (req, res) => {
           }
         );
         if (flag) {
-          const token = jwt.sign(
-            //Signing a jwt token
-            {
-              email: user.email,
-            },
-            process.env.SECRET_KEY
-          );
         }
       });
     }

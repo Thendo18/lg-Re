@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './Pages/landing/landing.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 
 
@@ -16,7 +17,8 @@ import { RegisterComponent } from './Pages/register/register.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    LandingComponent
+    LandingComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
