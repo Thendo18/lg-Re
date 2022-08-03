@@ -58,39 +58,4 @@ export class LoginComponent implements OnInit {
     }
   }
 
-
-
-
-
-
-
-  logbackup() {
-    let userlogin = {
-      data: {
-        email: this.form.value.email,
-        password: this.form.value.password,
-      },
-    };
-
-    if (this.form.invalid) {
-      return;
-    } else {
-      this.auth.getClients(userlogin.data).subscribe(
-        (myData: any) => {
-          this.user = myData.user[0].id;
-          this.route.navigate(['/landing']);
-          console.log(this.user);
-         
-          localStorage.setItem('id', this.user);
-          
-          this.id = this.user;
-        },
-        (err) => {
-          return err.error.errorMessage;
-        }
-      );
-    }
-  }
-
-
 }

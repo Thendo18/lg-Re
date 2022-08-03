@@ -14,16 +14,16 @@
             type="text"
             class="form-control"
             id="exampleInputText1"
-            formControlName="name"
+            formControlName="username"
             placeholder="Name"
             required
           />
           <i class="fa fa-user fa-lg" aria-hidden="true"></i>
           
-          <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
-            <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
-            <div *ngIf="f['name'].errors && f['name'].errors['name']">Please, enter Name.</div>
-            <div *ngIf="f['name'].dirty && f['name'].errors">Please, name should be 3 letters and more.</div>
+          <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+            <div *ngIf="f['username'].errors && f['username'].errors['required']">Name is required.</div>
+            <div *ngIf="f['username'].errors && f['username'].errors['name']">Please, enter Name.</div>
+            <div *ngIf="f['username'].dirty && f['username'].errors">Please, name should be 3 letters and more.</div>
           </div>
         </div>
   
